@@ -1,0 +1,123 @@
+---
+---
+
+<header
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-[#e2e8f0]"
+>
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-1 text-xl">
+        <span class="font-bold text-[#2563EB]">Smart</span><span class="font-semibold text-[#0f172a]">Orders</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a
+          href="#beneficios"
+          class="text-sm font-medium text-[#475569] hover:text-[#2563EB] transition-colors"
+        >
+          Beneficios
+        </a>
+        <a
+          href="#funcionalidades"
+          class="text-sm font-medium text-[#475569] hover:text-[#2563EB] transition-colors"
+        >
+          Funcionalidades
+        </a>
+        <a
+          href="#como-funciona"
+          class="text-sm font-medium text-[#475569] hover:text-[#2563EB] transition-colors"
+        >
+          Cómo funciona
+        </a>
+        <a
+          href="#faq"
+          class="text-sm font-medium text-[#475569] hover:text-[#2563EB] transition-colors"
+        >
+          FAQ
+        </a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-4">
+        <a
+          href="#contacto"
+          class="bg-[#059669] hover:bg-[#047857] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm"
+        >
+          Ver demo gratis
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-md text-[#475569] hover:text-[#0f172a] hover:bg-gray-100 transition-colors"
+          aria-label="Abrir menú"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              id="menu-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-[#e2e8f0] bg-white">
+    <nav class="flex flex-col px-4 py-3 gap-3">
+      <a
+        href="#beneficios"
+        class="text-sm font-medium text-[#475569] hover:text-[#2563EB] py-2 transition-colors"
+      >
+        Beneficios
+      </a>
+      <a
+        href="#funcionalidades"
+        class="text-sm font-medium text-[#475569] hover:text-[#2563EB] py-2 transition-colors"
+      >
+        Funcionalidades
+      </a>
+      <a
+        href="#como-funciona"
+        class="text-sm font-medium text-[#475569] hover:text-[#2563EB] py-2 transition-colors"
+      >
+        Cómo funciona
+      </a>
+      <a
+        href="#faq"
+        class="text-sm font-medium text-[#475569] hover:text-[#2563EB] py-2 transition-colors"
+      >
+        FAQ
+      </a>
+      <a
+        href="#contacto"
+        class="bg-[#059669] hover:bg-[#047857] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors text-center mt-1"
+      >
+        Ver demo gratis
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking a link
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>

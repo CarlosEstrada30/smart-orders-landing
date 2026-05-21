@@ -1,0 +1,55 @@
+---
+import DemoForm from '../forms/DemoForm';
+---
+
+<section id="contacto" class="py-12 md:py-20 bg-[#f8fafc]">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <!-- Left: copy -->
+      <div class="md:pt-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0f172a] mb-4">
+          Tu operación puede ser así de simple.
+        </h2>
+        <p class="text-[#475569] text-lg mb-8 leading-relaxed">
+          Agenda una demo de 30 minutos y te mostramos SmartOrders
+          con un caso parecido al tuyo. Sin tecnicismos, sin compromiso.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-[#059669] text-xs font-bold">✓</span>
+            </div>
+            <p class="text-sm text-[#475569]">Demo personalizada con los datos de tu lechería</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-[#059669] text-xs font-bold">✓</span>
+            </div>
+            <p class="text-sm text-[#475569]">Implementación completa en 48 horas</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-[#059669] text-xs font-bold">✓</span>
+            </div>
+            <p class="text-sm text-[#475569]">Capacitación para tu equipo incluida</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-[#059669] text-xs font-bold">✓</span>
+            </div>
+            <p class="text-sm text-[#475569]">Sin contratos a largo plazo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#e2e8f0]">
+        <DemoForm client:load />
+        <p class="text-center text-xs text-[#475569] mt-4">
+          Sin tarjeta de crédito · Respuesta en menos de 24 h · Demo personalizada
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
