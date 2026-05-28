@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smart-orders-landing
+    runtime: node
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: RESEND_API_KEY
+        sync: false

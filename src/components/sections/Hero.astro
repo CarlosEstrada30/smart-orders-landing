@@ -1,29 +1,40 @@
 ---
 ---
 
-<section class="pt-28 pb-20 md:pt-36 md:pb-28 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
+<section class="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-white overflow-hidden">
+
+  <!-- Dot grid background -->
+  <div
+    class="absolute inset-0 opacity-40"
+    style="background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px); background-size: 28px 28px;"
+  ></div>
+  <!-- Fade bottom -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4">
     <div class="grid md:grid-cols-2 gap-12 items-center">
+
       <!-- Text content -->
       <div>
-        <div class="inline-flex items-center gap-2 bg-blue-50 text-[#2563EB] text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+        <div class="inline-flex items-center gap-2 bg-blue-50 text-[#2563EB] text-xs font-semibold px-3 py-1.5 rounded-full mb-6 border border-blue-100">
           <span class="w-2 h-2 rounded-full bg-[#059669] inline-block"></span>
-          Solución para lecherías guatemaltecas
+          Software para fábricas de lácteos
         </div>
 
         <h1 class="text-4xl md:text-5xl font-bold text-[#0f172a] leading-tight mb-5">
-          Deja de consolidar pedidos a mano.<br />
-          <span class="text-[#2563EB]">Tu fábrica de lácteos necesita un sistema real.</span>
+          Deja de perder pedidos<br />
+          entre chats y hojas<br />
+          <span class="text-[#2563EB]">de Excel.</span>
         </h1>
 
         <p class="text-lg text-[#475569] mb-8 leading-relaxed">
-          SmartOrders centraliza tus pedidos, genera el consolidado de carga
-          por ruta y envía comprobantes automáticos por WhatsApp
-          — todo en un solo lugar.
+          SmartOrders centraliza pedidos, genera el consolidado de carga
+          por ruta y envía comprobantes automáticos por WhatsApp —
+          todo sin intervención manual.
         </p>
 
         <!-- CTAs -->
-        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+        <div class="flex flex-col sm:flex-row gap-3 mb-10">
           <a
             href="#contacto"
             class="bg-[#059669] hover:bg-[#047857] text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-sm text-center"
@@ -38,45 +49,59 @@
           </a>
         </div>
 
-        <!-- Proof inline -->
-        <div class="flex flex-col sm:flex-row gap-4 text-sm text-[#475569]">
-          <span class="flex items-center gap-1.5">
-            <span class="text-[#059669] font-bold">✓</span>
-            Sin instalación
-          </span>
-          <span class="flex items-center gap-1.5">
-            <span class="text-[#059669] font-bold">✓</span>
-            Implementación en 48 h
-          </span>
-          <span class="flex items-center gap-1.5">
-            <span class="text-[#059669] font-bold">✓</span>
-            Soporte en español
-          </span>
+        <!-- Métricas reales -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-[#e2e8f0]">
+          <div>
+            <div class="text-2xl font-bold text-[#0f172a]">+1,178</div>
+            <div class="text-xs text-[#475569] mt-0.5">órdenes procesadas</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-[#0f172a]">48 h</div>
+            <div class="text-xs text-[#475569] mt-0.5">de implementación</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-[#0f172a]">0</div>
+            <div class="text-xs text-[#475569] mt-0.5">errores en consolidados</div>
+          </div>
         </div>
       </div>
 
-      <!-- Visual placeholder -->
-      <div class="relative">
-        <div
-          class="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#2563EB] to-[#059669] aspect-[4/3] flex items-center justify-center"
-        >
-          <!-- Badge flotante superior izquierdo -->
-          <div class="absolute -top-3 -left-3 bg-white rounded-lg shadow-lg px-3 py-2 text-xs font-semibold text-[#059669] border border-[#e2e8f0] flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-[#059669] inline-block"></span>
-            Consolidado listo — Ruta Norte
+      <!-- Dashboard screenshot in browser frame -->
+      <div class="relative mt-8 md:mt-0">
+        <!-- Glow behind the frame -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#2563EB]/20 to-[#059669]/10 rounded-3xl blur-3xl scale-95 -z-10"></div>
+
+        <!-- Floating badge top-left -->
+        <div class="absolute -top-4 -left-4 z-10 bg-white rounded-xl shadow-lg px-3 py-2 text-xs font-semibold text-[#059669] border border-[#e2e8f0] flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-[#059669] inline-block animate-pulse"></span>
+          Consolidado listo — Ruta Norte
+        </div>
+
+        <!-- Browser chrome frame -->
+        <div class="rounded-2xl shadow-2xl overflow-hidden border border-[#d1d9e0] ring-1 ring-black/5">
+          <div class="bg-[#f0f3f6] px-4 py-2.5 flex items-center gap-2 border-b border-[#d1d9e0]">
+            <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
+            <div class="flex-1 bg-white rounded-md px-3 py-1 text-xs text-[#94a3b8] ml-2 border border-[#e2e8f0] truncate">
+              app.smartorders.com/dashboard
+            </div>
           </div>
-          <!-- Badge flotante inferior derecho -->
-          <div class="absolute -bottom-3 -right-3 bg-white rounded-lg shadow-lg px-3 py-2 text-xs font-semibold text-[#0f172a] border border-[#e2e8f0]">
-            📱 Comprobante enviado por WhatsApp
-          </div>
-          <!-- Contenido central del placeholder -->
-          <div class="text-center text-white/80">
-            <div class="text-4xl mb-2">📦</div>
-            <div class="text-sm font-medium">Dashboard SmartOrders</div>
-            <div class="text-xs opacity-70 mt-1">Pedidos · Rutas · Cobros</div>
-          </div>
+          <img
+            src="/assets/screenshots/dashboard.png"
+            alt="Dashboard SmartOrders"
+            class="w-full block"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Floating badge bottom-right -->
+        <div class="absolute -bottom-4 -right-4 z-10 bg-white rounded-xl shadow-lg px-3 py-2 text-xs font-semibold text-[#0f172a] border border-[#e2e8f0] flex items-center gap-1.5">
+          <span>📱</span>
+          Comprobante enviado por WhatsApp
         </div>
       </div>
+
     </div>
   </div>
 </section>

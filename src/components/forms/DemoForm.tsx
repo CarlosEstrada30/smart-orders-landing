@@ -16,7 +16,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-const WHATSAPP_NUMBER = '50200000000';
+const WHATSAPP_NUMBER = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? '50200000000';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%2C%20quiero%20una%20demo%20de%20SmartOrders`;
 
 export default function DemoForm() {

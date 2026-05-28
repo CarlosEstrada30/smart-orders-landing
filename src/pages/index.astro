@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -10,7 +11,8 @@ import Testimonials from '../components/sections/Testimonials.astro';
 import FAQ from '../components/sections/FAQ.astro';
 import FinalCTA from '../components/sections/FinalCTA.astro';
 
-const WHATSAPP_LINK = 'https://wa.me/50200000000?text=Hola%2C%20quiero%20una%20demo%20de%20SmartOrders';
+const waNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? '50200000000';
+const WHATSAPP_LINK = `https://wa.me/${waNumber}?text=Hola%2C%20quiero%20una%20demo%20de%20SmartOrders`;
 ---
 
 <BaseLayout>
