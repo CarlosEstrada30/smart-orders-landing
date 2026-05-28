@@ -10,8 +10,6 @@ const schema = z.object({
     .string()
     .min(8, 'Ingresa un número de WhatsApp válido')
     .regex(/^[\+\d\s\-()]+$/, 'Formato de número inválido'),
-  email: z.string().email('Ingresa un correo electrónico válido'),
-  mensaje: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -126,42 +124,6 @@ export default function DemoForm() {
           {errors.whatsapp && (
             <p className="mt-1 text-xs text-red-500">{errors.whatsapp.message}</p>
           )}
-        </div>
-
-        {/* Email */}
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[#0f172a] mb-1">
-            Correo electrónico <span className="text-red-500">*</span>
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="juan@lacteos.com"
-            className={`w-full px-3 py-2.5 text-sm rounded-lg border transition-colors outline-none focus:ring-2 focus:ring-[#2563EB]/20 ${
-              errors.email
-                ? 'border-red-400 bg-red-50'
-                : 'border-[#e2e8f0] bg-white hover:border-[#2563EB]/50 focus:border-[#2563EB]'
-            }`}
-            {...register('email')}
-          />
-          {errors.email && (
-            <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
-          )}
-        </div>
-
-        {/* Mensaje opcional */}
-        <div>
-          <label htmlFor="mensaje" className="block text-sm font-medium text-[#0f172a] mb-1">
-            ¿Cuántos pedidos manejan al día aprox.?{' '}
-            <span className="text-[#475569] font-normal">(opcional)</span>
-          </label>
-          <textarea
-            id="mensaje"
-            rows={3}
-            placeholder="Ej: unos 30-40 pedidos diarios..."
-            className="w-full px-3 py-2.5 text-sm rounded-lg border border-[#e2e8f0] bg-white hover:border-[#2563EB]/50 focus:border-[#2563EB] transition-colors outline-none focus:ring-2 focus:ring-[#2563EB]/20 resize-none"
-            {...register('mensaje')}
-          />
         </div>
 
         {/* Server error */}

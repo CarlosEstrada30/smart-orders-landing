@@ -24,8 +24,6 @@ export const POST: APIRoute = async ({ request }) => {
     nombre?: string;
     empresa?: string;
     whatsapp?: string;
-    email?: string;
-    mensaje?: string;
   };
 
   try {
@@ -35,7 +33,7 @@ export const POST: APIRoute = async ({ request }) => {
     return json({ ok: false, message: 'JSON inválido.' }, 400);
   }
 
-  if (!data.nombre || !data.empresa || !data.whatsapp || !data.email) {
+  if (!data.nombre || !data.empresa || !data.whatsapp) {
     return json({ ok: false, message: 'Faltan campos requeridos.' }, 400);
   }
 
@@ -59,8 +57,6 @@ export const POST: APIRoute = async ({ request }) => {
         <p><strong>Nombre:</strong> ${data.nombre}</p>
         <p><strong>Empresa:</strong> ${data.empresa}</p>
         <p><strong>WhatsApp:</strong> ${data.whatsapp}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Pedidos/día aprox:</strong> ${data.mensaje || 'No especificado'}</p>
       `,
     });
 
